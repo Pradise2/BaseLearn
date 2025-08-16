@@ -1,0 +1,200 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "totalShares",
+						"type": "uint256"
+					}
+				],
+				"name": "TooManyShares",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_slot",
+						"type": "uint256"
+					}
+				],
+				"name": "checkForPacking",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "r",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "debugResetShares",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "_newShares",
+						"type": "uint16"
+					}
+				],
+				"name": "grantShares",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "idNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "viewSalary",
+				"outputs": [
+					{
+						"internalType": "uint32",
+						"name": "",
+						"type": "uint32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "viewShares",
+				"outputs": [
+					{
+						"internalType": "uint16",
+						"name": "",
+						"type": "uint16"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "A contract to demonstrate knowledge of storage in Solidity, including packing.",
+			"errors": {
+				"TooManyShares(uint256)": [
+					{
+						"details": "Custom error for when granting shares would exceed the 5000 share limit.",
+						"params": {
+							"totalShares": "The total number of shares the employee would have."
+						}
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"details": "Sets the initial values for the employee record."
+				},
+				"grantShares(uint16)": {
+					"params": {
+						"_newShares": "The number of new shares to grant."
+					}
+				},
+				"viewSalary()": {
+					"returns": {
+						"_0": "The employee's salary."
+					}
+				},
+				"viewShares()": {
+					"returns": {
+						"_0": "The number of shares the employee owns."
+					}
+				}
+			},
+			"title": "EmployeeStorage",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"checkForPacking(uint256)": {
+					"notice": "Do not modify this function.  It is used to enable the unit test for this pin to check whether or not you have configured your storage variables to make use of packing. If you wish to cheat, simply modify this function to always return `0` I'm not your boss ¯\\_(ツ)_/¯ Fair warning though, if you do cheat, it will be on the blockchain having been deployed by your wallet....FOREVER!"
+				},
+				"debugResetShares()": {
+					"notice": "Warning: Anyone can use this function at any time!"
+				},
+				"grantShares(uint16)": {
+					"notice": "Increases the number of shares allocated to an employee."
+				},
+				"viewSalary()": {
+					"notice": "Returns the value in the private `salary` variable."
+				},
+				"viewShares()": {
+					"notice": "Returns the value in the private `shares` variable."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/EmployeeStorage.sol": "EmployeeStorage"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/EmployeeStorage.sol": {
+			"keccak256": "0x3f71b9df44efd8e0837761676ce9285843b69fc93b134895a973ab52712c3577",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1fc47e6d24a7eb97a7053102a8aa10c3192d86f0c2ecaa5fd2c8567682ee20ae",
+				"dweb:/ipfs/QmfN9BV2LVNCnWBdupkeZkcR4ytAEW69cTeW7V5HmzpT57"
+			]
+		}
+	},
+	"version": 1
+}

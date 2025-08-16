@@ -1,0 +1,131 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_time",
+						"type": "uint256"
+					}
+				],
+				"name": "AfterHours",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_time",
+						"type": "uint256"
+					}
+				],
+				"name": "doNotDisturb",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_number",
+						"type": "uint256"
+					}
+				],
+				"name": "fizzBuzz",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "A contract to demonstrate knowledge of control structures in Solidity.",
+			"errors": {
+				"AfterHours(uint256)": [
+					{
+						"details": "A custom error to indicate that an operation was attempted after hours.",
+						"params": {
+							"_time": "The time at which the operation was attempted."
+						}
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {
+				"doNotDisturb(uint256)": {
+					"params": {
+						"_time": "The time to check, in 24-hour format (e.g., 1300 for 1:00 PM)."
+					},
+					"returns": {
+						"_0": "A string memory representing the time of day."
+					}
+				},
+				"fizzBuzz(uint256)": {
+					"params": {
+						"_number": "The number to check."
+					},
+					"returns": {
+						"_0": "A string memory representing \"Fizz\", \"Buzz\", \"FizzBuzz\", or \"Splat\"."
+					}
+				}
+			},
+			"title": "ControlStructures",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"doNotDisturb(uint256)": {
+					"notice": "Determines the time of day and handles various time-based conditions."
+				},
+				"fizzBuzz(uint256)": {
+					"notice": "Implements the FizzBuzz logic."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ControlStructures.sol": "ControlStructures"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ControlStructures.sol": {
+			"keccak256": "0x93d721cd36c21298052325fd6b494ec83f15ced753d42e8d5c68818f0031aac0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c97c0636ae40d3b7707a9f81b94acd50d362212ed40bb1f33e0f745bf0870844",
+				"dweb:/ipfs/QmR7YA2rW1nzkcXRSFSci12UYR294q1ehYMsyocQmEzgYf"
+			]
+		}
+	},
+	"version": 1
+}
